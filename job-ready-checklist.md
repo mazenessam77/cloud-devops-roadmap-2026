@@ -66,6 +66,8 @@ You do not need to master everything before applying. You should be able to demo
 
 ## 9. Kubernetes
 
+Minimum level before applying: working knowledge of a simple application deployment and basic troubleshooting—not Kubernetes mastery or cluster administration.
+
 - [ ] Explain Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, and probes.
 - [ ] Deploy an application to Kubernetes.
 - [ ] Configure requests and limits.

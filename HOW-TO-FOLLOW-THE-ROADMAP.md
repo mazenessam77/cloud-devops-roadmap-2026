@@ -4,17 +4,11 @@ Start at Phase 0 and move down the list. **Follow the stages in order, but allow
 
 For major labs, use this loop: **Build → Break → Troubleshoot → Fix → Explain**. Break only safe local or disposable lab environments; record the symptom, evidence, root cause, and fix.
 
-## 0. Prerequisites
+## Security throughout every phase
 
-**Study:** [prerequisites.md](prerequisites.md): backend flow, APIs, and basic database design.
+Security starts on day one: use least privilege and MFA in cloud, keep secrets out of Git and logs, use TLS for web traffic, restrict network access, scan/update dependencies, and avoid running containers as root where practical. It is not a final stage to postpone.
 
-**Goal:** Understand what you will later containerize, deploy, and operate.
-
-**Build:** A small API connected to PostgreSQL, with a simple related schema, CRUD endpoints, environment variables, logs, and `/health`.
-
-**Move on when:** You can explain how a request reaches the API and reads/writes database data, and you built the project yourself.
-
-## 1. Foundations — Computer Basics, Networking, Linux, Git
+## 0. Foundations — Computer Basics, Networking, Linux, Git
 
 **Study:** CPU/RAM/disk/processes; IP, DNS, TCP, ports, HTTP; Linux files, permissions, services, logs, SSH; Git commits, branches, and Pull Requests.
 
@@ -30,7 +24,7 @@ After Git/GitHub basics, open source is strongly recommended for real collaborat
 
 The normal workflow is: **Fork → Branch → Change → Test → Pull Request**. Read the project’s contribution guide, keep the change small, and describe what you tested.
 
-## 2. Automation — Bash + Python/Go
+## 1. Automation — Bash + Python/Go
 
 **Study:** Bash variables, conditions, loops, functions, exit codes, and environment variables; then simple Python or Go for JSON and HTTP APIs.
 
@@ -39,6 +33,16 @@ The normal workflow is: **Fork → Branch → Change → Test → Pull Request**
 **Build:** A health-check script that reads a URL from an environment variable, calls it with a timeout, and returns success or failure.
 
 **Move on when:** You can write a small script, handle an expected error, and explain its exit code.
+
+## 2. Required prerequisite project — API + PostgreSQL
+
+**Study:** [prerequisites.md](prerequisites.md): backend flow, APIs, and basic database design.
+
+**Goal:** Understand what you will later containerize, deploy, and operate.
+
+**Build:** A small API connected to PostgreSQL, with a simple related schema, CRUD endpoints, environment variables, logs, and `/health`.
+
+**Move on when:** You can explain how a request reaches the API and reads/writes database data, and you built the project yourself.
 
 ## 3. Cloud — Choose One Provider
 
@@ -80,11 +84,11 @@ The normal workflow is: **Fork → Branch → Change → Test → Pull Request**
 
 **Move on when:** You can use `kubectl get`, `describe`, and `logs` to find a basic deployment/configuration failure.
 
-## 7. Operations — Monitoring + Basic Security
+## 7. Operations — Monitoring
 
-**Study:** Metrics, logs, traces, Prometheus, Grafana, alerts, least privilege, secrets, TLS, secure SSH, and basic image/dependency scanning.
+**Study:** Metrics, logs, traces, Prometheus, Grafana, and alerts. Continue the security practices introduced above.
 
-**Goal:** See whether the app is healthy and apply everyday security hygiene.
+**Goal:** See whether the app is healthy and use evidence during troubleshooting.
 
 **Build:** Complete Project 8: create a dashboard for resource and API metrics, one actionable alert, and move configuration secrets out of code.
 
@@ -102,6 +106,6 @@ The normal workflow is: **Fork → Branch → Change → Test → Pull Request**
 
 ## 9. Start Applying
 
-Start applying for junior Cloud Engineer, DevOps Engineer, and Cloud Operations roles after you can demonstrate Projects 3–6 and most of the [job-ready checklist](job-ready-checklist.md). You should be able to explain your application path, cloud setup, Docker workflow, Terraform plan/state, CI/CD pipeline, logs, and one troubleshooting story.
+Start applying for junior Cloud Engineer, DevOps Engineer, and Cloud Operations roles after you can demonstrate Projects 3–6, meet most of the [job-ready checklist](job-ready-checklist.md), and meet this minimum Kubernetes/operations level: deploy a simple app, inspect it with `kubectl get`, `describe`, and `logs`, understand a basic dashboard/alert, and handle secrets safely. You should be able to explain your application path, cloud setup, Docker workflow, Terraform plan/state, CI/CD pipeline, logs, and one troubleshooting story.
 
-Do not wait for Kubernetes mastery, every optional project, certifications, or advanced system design. Keep learning through Projects 7–8 while you apply.
+You do not need Kubernetes mastery, cluster administration, advanced SRE, every optional project, certifications, or advanced system design. Continue Projects 7–8 while you apply.
