@@ -14,7 +14,7 @@ Use `push → test → build image → push registry → deploy`. Tag images wit
 
 ## Short lab (25 minutes)
 
-Create a GitHub Actions workflow that checks out Project 2, installs dependencies, and runs tests. Intentionally make a test fail and inspect the workflow log.
+Create a GitHub Actions workflow that checks out Project 2, installs dependencies, and runs tests. Intentionally make a test or configuration step fail, inspect the workflow log, fix it, rerun it, and explain why the deployment did not proceed.
 
 ## Common mistakes
 

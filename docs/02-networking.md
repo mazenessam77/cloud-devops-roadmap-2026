@@ -14,7 +14,7 @@ The request path is `user → DNS → load balancer → application → database
 
 ## Short lab (20 minutes)
 
-Run `dig example.com`, `curl -I https://example.com`, and `ss -lntp`. Explain what each command proves and what it does not prove.
+Run `dig example.com`, `curl -I https://example.com`, and `ss -lntp`. Then use `curl` against an intentionally wrong local port, identify the connection error, find the real listener, fix the port, and explain the result.
 
 ## Common mistakes
 

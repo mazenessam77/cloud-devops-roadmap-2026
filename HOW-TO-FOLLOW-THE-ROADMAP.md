@@ -2,6 +2,8 @@
 
 Start at Phase 0 and move down the list. **Follow the stages in order, but allow small overlaps during projects.** For example, you can improve a Bash script while starting cloud labs. Move on when you can explain the basics, complete the practical task, and diagnose one small failure.
 
+For major labs, use this loop: **Build → Break → Troubleshoot → Fix → Explain**. Break only safe local or disposable lab environments; record the symptom, evidence, root cause, and fix.
+
 ## 0. Prerequisites
 
 **Study:** [prerequisites.md](prerequisites.md): backend flow, APIs, and basic database design.
@@ -21,6 +23,12 @@ Start at Phase 0 and move down the list. **Follow the stages in order, but allow
 **Build:** Complete Project 1: launch a Linux VM, connect with SSH, install Nginx, open only needed access, and inspect logs.
 
 **Move on when:** You can use `curl`, `dig`/`nslookup`, `ss`, `systemctl`, and `journalctl` to investigate a simple service issue; you can also commit and push your work with Git.
+
+### Optional open-source practice
+
+After Git/GitHub basics, open source is strongly recommended for real collaboration practice, but it is **not required** for job readiness. Start small: fix documentation or a README, correct an example, add a small test, report a reproducible bug, or improve a script/CI workflow.
+
+The normal workflow is: **Fork → Branch → Change → Test → Pull Request**. Read the project’s contribution guide, keep the change small, and describe what you tested.
 
 ## 2. Automation — Bash + Python/Go
 

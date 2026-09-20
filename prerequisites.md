@@ -64,6 +64,7 @@ Build a small backend in Python, Node.js, Go, or .NET. The language does not mat
 - Perform CRUD operations through the API.
 - Add request/error logging and `GET /health`.
 - Test the API with `curl` or Postman.
+- Stop PostgreSQL once, inspect the backend log/error, restart it, and explain how the API recovered.
 - Explain how one API request reads or writes data in PostgreSQL.
 
 Keep it small. The goal is to understand the backend-to-database path before you containerize, deploy, and operate it.
@@ -78,4 +79,5 @@ You do not need a full backend course, advanced framework design, microservices,
 - [ ] I can explain tables, rows, primary/foreign keys, simple relationships, CRUD, indexes, and transactions.
 - [ ] I built and ran a small API connected to PostgreSQL myself.
 - [ ] I created a simple related schema and used the API to perform CRUD.
+- [ ] I observed and explained how the backend behaves when PostgreSQL is unavailable.
 - [ ] I can explain how the backend reads from and writes to the database.

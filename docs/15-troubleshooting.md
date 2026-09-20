@@ -10,11 +10,24 @@ Follow the request path: user → DNS → network → load balancer → server �
 
 ## Practical examples
 
-For a down website ask: does DNS resolve, is the port reachable, is the process/container running, what do logs say, can the app reach its database, are resources exhausted, and what changed recently? A 502 points to a proxy/upstream issue; CrashLoopBackOff needs pod logs and description.
+For a down website ask: does DNS resolve, is the port reachable, is the process/container running, what do logs say, can the app reach its database, are resources exhausted, and what changed recently?
+
+| Scenario | First evidence to collect |
+|---|---|
+| 502 Bad Gateway | proxy target, app port, upstream logs |
+| Service not listening | `systemctl status`, `ss -lntp`, journal logs |
+| Disk full | `df -h`, application/journal errors |
+| High CPU or memory | `top`, `free -h`, process/app logs |
+| Container crash | container exit code, `docker logs`, environment/config |
+| Wrong environment variable | deployed configuration and application logs |
+| Database unavailable | connection error in app logs and database status |
+| Failed deployment | CI/CD or Kubernetes event logs and the changed configuration |
+
+A 502 points to a proxy/upstream issue; CrashLoopBackOff needs pod logs and description.
 
 ## Short lab (25 minutes)
 
-In a safe local environment, change an app’s target port or environment variable so it fails. Diagnose it with `curl`, `ss`, service/container logs, and configuration; restore it and write a three-line incident note.
+Use this loop: **Build → Break → Troubleshoot → Fix → Explain**. In a safe local environment, change an app’s target port or environment variable so it fails. Diagnose it with `curl`, `ss`, service/container logs, and configuration; restore it and write a three-line incident note: symptom, root cause, and fix.
 
 ## Common mistakes
 

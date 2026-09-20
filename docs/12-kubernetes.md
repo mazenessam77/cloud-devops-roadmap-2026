@@ -14,7 +14,7 @@ Use `kubectl get pods`, `kubectl describe pod`, and `kubectl logs` first. CrashL
 
 ## Short lab (30 minutes)
 
-Use kind or minikube. Deploy an API with a Deployment, Service, ConfigMap, readiness probe, and CPU/memory requests; inspect it with `kubectl get`, `describe`, and `logs`.
+Use kind or minikube. Deploy an API with a Deployment, Service, ConfigMap, readiness probe, and CPU/memory requests; inspect it with `kubectl get`, `describe`, and `logs`. Then set a required environment variable incorrectly, observe the CrashLoopBackOff, fix it, and explain the logs.
 
 ## Common mistakes
 

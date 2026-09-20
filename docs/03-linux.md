@@ -14,7 +14,7 @@ For a non-responsive app: check service status, service logs, listening port, lo
 
 ## Short lab (30 minutes)
 
-Install Nginx. Run `systemctl status nginx`, `curl localhost`, `sudo ss -lntp`, and `journalctl -u nginx -n 20`. Change the welcome page, then restart the service.
+Install Nginx. Run `systemctl status nginx`, `curl localhost`, `sudo ss -lntp`, and `journalctl -u nginx -n 20`. Stop it, observe the failure, recover it, then make a copy of the welcome page unreadable and restore its permissions. Explain the evidence you used.
 
 ## Common mistakes
 

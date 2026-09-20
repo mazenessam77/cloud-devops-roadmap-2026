@@ -14,7 +14,7 @@ Use `docker logs`, `docker exec`, and `docker compose logs -f` to investigate. A
 
 ## Short lab (30 minutes)
 
-Containerize Project 2 and run it with PostgreSQL and Nginx in Compose. Add a named volume and healthcheck; use `docker compose logs` to verify it.
+Containerize Project 2 and run it with PostgreSQL and Nginx in Compose. Add a named volume and healthcheck; use `docker compose logs` to verify it. Then set one required environment variable to a bad value, inspect the failing container/logs, fix it, and explain the root cause.
 
 ## Common mistakes
 

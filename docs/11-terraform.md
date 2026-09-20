@@ -14,7 +14,7 @@ Always read a plan before apply. Keep state out of Git. Use `destroy` deliberate
 
 ## Short lab (30 minutes)
 
-Write a small configuration that creates an S3 bucket or equivalent safe resource. Run `fmt`, `init`, `validate`, `plan`, `apply`, inspect output, then `destroy` it.
+Write a small configuration that creates an S3 bucket or equivalent safe resource. Run `fmt`, `init`, `validate`, `plan`, `apply`, inspect output, then `destroy` it. First supply an invalid or missing variable, read the validation/plan error, fix it, and explain the change.
 
 ## Common mistakes
 
