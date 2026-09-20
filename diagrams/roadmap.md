@@ -4,7 +4,7 @@
 flowchart TD
     Computer[Computer Basics] --> Networking[Networking]
     Networking --> Linux[Linux]
-    Linux --> Git[Git]
+    Linux --> Git[Git & GitHub]
     Git --> Automation[Bash + Python/Go]
     Automation --> Prerequisite[Required prerequisite project<br/>Small API + PostgreSQL]
     Prerequisite --> Docker[Docker]

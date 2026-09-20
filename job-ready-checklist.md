@@ -19,8 +19,9 @@ You do not need to master everything before applying. You should be able to demo
 
 ## 3. Git & Automation
 
-- [ ] Use Git comfortably: branch, commit, merge, push, pull, and open a pull request.
+- [ ] Use Git comfortably: init/clone, add, commit, branch, merge, fetch, pull, push, and revert a simple change.
 - [ ] Resolve a simple merge conflict.
+- [ ] Use GitHub repositories, Issues, Pull Requests, basic review, forks, and repository secrets appropriately.
 - [ ] Write Bash scripts for basic automation.
 - [ ] Read and modify simple Python or Go code.
 - [ ] Call an API and work with JSON from a script.

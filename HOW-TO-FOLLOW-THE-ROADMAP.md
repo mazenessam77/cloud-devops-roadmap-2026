@@ -10,7 +10,7 @@ Security starts on day one: use least privilege and MFA in cloud, keep secrets o
 
 ## 0. Foundations — Computer Basics, Networking, Linux, Git
 
-**Study:** CPU/RAM/disk/processes; IP, DNS, TCP, ports, HTTP; Linux files, permissions, services, logs, SSH; Git commits, branches, and Pull Requests.
+**Study:** CPU/RAM/disk/processes; IP, DNS, TCP, ports, HTTP; Linux files, permissions, services, logs, SSH; Git and GitHub repositories, branches, commits, Pull Requests, and basic review.
 
 **Goal:** Be comfortable using a Linux machine and tracing a basic web request.
 

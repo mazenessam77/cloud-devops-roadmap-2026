@@ -6,7 +6,7 @@ Move forward when you can explain the previous stage and finish its small lab. D
 flowchart TD
     A[Computer Basics] --> B[Networking]
     B --> C[Linux]
-    C --> D[Git]
+    C --> D[Git & GitHub]
     D --> E[Bash + Python/Go]
     E --> P[Required prerequisite project<br/>Small API + PostgreSQL]
     P --> G[Docker]
