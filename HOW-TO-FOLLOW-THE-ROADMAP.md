@@ -1,71 +1,99 @@
 # How to follow the roadmap
 
-## Where to start
+Start at Phase 0 and move down the list. **Follow the stages in order, but allow small overlaps during projects.** For example, you can improve a Bash script while starting cloud labs. Move on when you can explain the basics, complete the practical task, and diagnose one small failure.
 
-Start with [ROADMAP.md](ROADMAP.md) to see the whole path. Then work through the numbered docs in this exact order. Use one notebook or repository to save commands, notes, mistakes, and project evidence. Do not study several stages at once.
+## 0. Prerequisites
 
-1. Computer Basics → Networking → Linux
-2. Git → Bash + Python/Go
-3. Read [prerequisites.md](prerequisites.md) while building the small API; this is useful context, not a detour.
-4. Choose one cloud provider → Docker → CI/CD → Terraform
-5. Kubernetes → Monitoring & Observability → Basic Security
-6. Complete and document projects as you go.
+**Study:** [prerequisites.md](prerequisites.md): backend flow, APIs, and basic database design.
 
-## When to move on
+**Goal:** Understand what you will later containerize, deploy, and operate.
 
-Move on when you can explain the topic simply, complete its lab without blindly copying commands, and diagnose one small intentional failure. You do not need to memorize every command, finish every resource, or earn a certification before continuing.
+**Build:** A small API connected to PostgreSQL, with a simple related schema, CRUD endpoints, environment variables, logs, and `/health`.
 
-## Readiness checks by stage
+**Move on when:** You can explain how a request reaches the API and reads/writes database data, and you built the project yourself.
 
-### Computer basics
+## 1. Foundations — Computer Basics, Networking, Linux, Git
 
-- [ ] I can explain CPU, RAM, disk, process, and client/server.
-- [ ] I can use `ps`, `free -h`, and `df -h` to inspect a machine.
+**Study:** CPU/RAM/disk/processes; IP, DNS, TCP, ports, HTTP; Linux files, permissions, services, logs, SSH; Git commits, branches, and Pull Requests.
 
-### Networking
+**Goal:** Be comfortable using a Linux machine and tracing a basic web request.
 
-- [ ] I can explain IP, DNS, TCP, ports, HTTP, and a firewall.
-- [ ] I can use `curl`, `dig`/`nslookup`, and `ss` for a basic connection check.
+**Build:** Complete Project 1: launch a Linux VM, connect with SSH, install Nginx, open only needed access, and inspect logs.
 
-### Linux
+**Move on when:** You can use `curl`, `dig`/`nslookup`, `ss`, `systemctl`, and `journalctl` to investigate a simple service issue; you can also commit and push your work with Git.
 
-- [ ] I can navigate files, use permissions, connect with SSH, and use `sudo` carefully.
-- [ ] I can inspect a service with `systemctl`, `journalctl`, logs, `ss`, `df -h`, and `free -h`.
+## 2. Automation — Bash + Python/Go
 
-### Git and scripting
+**Study:** Bash variables, conditions, loops, functions, exit codes, and environment variables; then simple Python or Go for JSON and HTTP APIs.
 
-- [ ] I can branch, commit, push, and open a pull request.
-- [ ] I can write a small Bash health-check script and a Python/Go script that reads config and handles errors.
+**Goal:** Automate repetitive checks instead of relying on manual steps.
 
-### Cloud
+**Build:** A health-check script that reads a URL from an environment variable, calls it with a timeout, and returns success or failure.
 
-- [ ] I can use one provider’s IAM, network, VM, storage, load balancer, managed database, logs, and cost controls.
-- [ ] I can explain public/private networking and avoid public database access.
+**Move on when:** You can write a small script, handle an expected error, and explain its exit code.
 
-### Docker
+## 3. Cloud — Choose One Provider
 
-- [ ] I can build an image, run it, inspect logs, and use Docker Compose for API + database + Nginx.
-- [ ] I can explain image versus container and where environment variables/volumes belong.
+**Study:** Choose AWS, Azure, or GCP. Learn IAM, virtual networking, VM/compute, object storage, load balancing, managed databases, logs, and cost controls.
 
-### CI/CD and Terraform
+**Goal:** Deploy a simple workload securely on one cloud without trying to learn every provider.
 
-- [ ] I can make GitHub Actions test and build an image, with secrets stored safely.
-- [ ] I can run `terraform init`, `plan`, and `apply`, explain state, and clean up a lab safely.
+**Build:** Create a small network, VM, restrictive firewall/security rules, object-storage bucket, and budget alert in a sandbox account.
 
-### Kubernetes
+**Move on when:** You can explain public versus private networking, least-privilege access, and where to find application or VM logs.
 
-- [ ] I can deploy an app with Deployment, Service, Ingress, ConfigMap, Secret, probes, and requests/limits.
-- [ ] I can inspect a failing Pod with `kubectl get`, `describe`, and `logs`.
+## 4. Containers — Docker
 
-### Monitoring and security
+**Study:** Images, containers, Dockerfiles, ports, volumes, networks, logs, environment variables, and Docker Compose.
 
-- [ ] I can use a Grafana dashboard for CPU/memory and request/error/latency metrics.
-- [ ] I can explain logs versus metrics versus traces, least privilege, TLS, and secret handling.
+**Goal:** Run the same application consistently on your machine and later in cloud environments.
 
-## What level is enough?
+**Build:** Complete Project 3: run Nginx, your backend API, and PostgreSQL with Docker Compose.
 
-At every stage, aim for **working competence**: build one small thing, explain it in everyday language, and troubleshoot a common failure. Skip advanced internals and learn them only when a real project or job needs them. The [Learn Later section](ROADMAP.md#learn-later) names those topics.
+**Move on when:** You can build an image, inspect container logs, enter a container, and explain how services communicate in Compose.
 
-## When to start applying
+## 5. Automation & Infrastructure — CI/CD + Terraform
 
-Start applying when you can demonstrate Projects 3–6 and most of the [job-ready checklist](job-ready-checklist.md). You should be able to walk through your architecture, deployment route, logs/metrics, secure configuration, and one failure you fixed. Do not wait for Kubernetes mastery, every optional project, or advanced engineering topics; continue learning while you apply.
+**Study:** GitHub Actions workflow/job/step/secrets; Terraform providers, resources, variables, outputs, plan, apply, destroy, and state.
+
+**Goal:** Make delivery repeatable and infrastructure reproducible.
+
+**Build:** Create a pipeline that tests and builds your app; use Terraform to provision a small disposable cloud environment.
+
+**Move on when:** You can explain a pipeline run, safely store secrets, review a Terraform plan, and destroy a lab you created.
+
+## 6. Kubernetes
+
+**Study:** Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, probes, requests/limits, and basic `kubectl` troubleshooting.
+
+**Goal:** Deploy and inspect a containerized application on a cluster.
+
+**Build:** Complete Project 7: deploy the API with a Deployment, Service, Ingress, ConfigMap, Secret, probes, and resource settings.
+
+**Move on when:** You can use `kubectl get`, `describe`, and `logs` to find a basic deployment/configuration failure.
+
+## 7. Operations — Monitoring + Basic Security
+
+**Study:** Metrics, logs, traces, Prometheus, Grafana, alerts, least privilege, secrets, TLS, secure SSH, and basic image/dependency scanning.
+
+**Goal:** See whether the app is healthy and apply everyday security hygiene.
+
+**Build:** Complete Project 8: create a dashboard for resource and API metrics, one actionable alert, and move configuration secrets out of code.
+
+**Move on when:** You can explain metrics versus logs versus traces, find a failure in logs/dashboard data, and describe how you protect credentials.
+
+## 8. Projects
+
+**Study:** Your own work. Revisit weak areas while completing Projects 1–8.
+
+**Goal:** Turn separate tools into evidence that you can build, deploy, automate, and troubleshoot a small system.
+
+**Build:** A portfolio README for your final project: architecture diagram, local/cloud setup, CI/CD route, logs/metrics, security notes, cost cleanup, and one failure you fixed.
+
+**Move on when:** You can give a short, honest walkthrough of the project without reading from notes.
+
+## 9. Start Applying
+
+Start applying for junior Cloud Engineer, DevOps Engineer, and Cloud Operations roles after you can demonstrate Projects 3–6 and most of the [job-ready checklist](job-ready-checklist.md). You should be able to explain your application path, cloud setup, Docker workflow, Terraform plan/state, CI/CD pipeline, logs, and one troubleshooting story.
+
+Do not wait for Kubernetes mastery, every optional project, certifications, or advanced system design. Keep learning through Projects 7–8 while you apply.
