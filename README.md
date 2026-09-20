@@ -8,7 +8,7 @@ Start with [HOW-TO-FOLLOW-THE-ROADMAP.md](HOW-TO-FOLLOW-THE-ROADMAP.md), then us
 
 ## Recommended learning rule
 
-**One cloud provider + Linux + networking + Git + Bash + one programming language + Docker + one CI/CD tool + Terraform + Kubernetes + Prometheus/Grafana** is enough for the main path. Use Python as the default language and GitHub Actions as the default CI/CD tool. Pick **one** cloud—AWS is used for examples here.
+**Linux + networking + Git + Bash + one programming language + Docker + one cloud provider + one CI/CD tool + Terraform + Kubernetes + Prometheus/Grafana** is enough for the main path. Use Python as the default language and GitHub Actions as the default CI/CD tool. Pick **one** cloud—AWS is used for examples here.
 
 ## Outcome
 

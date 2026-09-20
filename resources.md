@@ -10,9 +10,9 @@ Links are official or established free references, checked September 2026. Read 
 | Bash/Python | [GNU Bash manual](https://www.gnu.org/software/bash/manual/), [Python tutorial](https://docs.python.org/3/tutorial/) |
 | Web/API | [MDN HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP), [MDN web security](https://developer.mozilla.org/en-US/docs/Web/Security) |
 | PostgreSQL/Redis | [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html), [Redis docs](https://redis.io/docs/latest/) |
+| Docker | [Docker get started](https://docs.docker.com/get-started/), [Compose](https://docs.docker.com/compose/) |
 | AWS | [AWS Skill Builder](https://skillbuilder.aws/), [AWS documentation](https://docs.aws.amazon.com/) |
 | Azure/GCP | [Microsoft Learn](https://learn.microsoft.com/training/), [Google Cloud Skills Boost](https://www.cloudskillsboost.google/) |
-| Docker | [Docker get started](https://docs.docker.com/get-started/), [Compose](https://docs.docker.com/compose/) |
 | GitHub Actions | [GitHub Actions docs](https://docs.github.com/actions) |
 | Terraform | [HashiCorp Terraform intro](https://developer.hashicorp.com/terraform/intro), [tutorials](https://developer.hashicorp.com/terraform/tutorials) |
 | Kubernetes | [Kubernetes basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/), [concepts](https://kubernetes.io/docs/concepts/) |

@@ -44,25 +44,25 @@ The normal workflow is: **Fork → Branch → Change → Test → Pull Request**
 
 **Move on when:** You can explain how a request reaches the API and reads/writes database data, and you built the project yourself.
 
-## 3. Cloud — Choose One Provider
-
-**Study:** Choose AWS, Azure, or GCP. Learn IAM, virtual networking, VM/compute, object storage, load balancing, managed databases, logs, and cost controls.
-
-**Goal:** Deploy a simple workload securely on one cloud without trying to learn every provider.
-
-**Build:** Create a small network, VM, restrictive firewall/security rules, object-storage bucket, and budget alert in a sandbox account.
-
-**Move on when:** You can explain public versus private networking, least-privilege access, and where to find application or VM logs.
-
-## 4. Containers — Docker
+## 3. Containers — Docker
 
 **Study:** Images, containers, Dockerfiles, ports, volumes, networks, logs, environment variables, and Docker Compose.
 
-**Goal:** Run the same application consistently on your machine and later in cloud environments.
+**Goal:** Run the same application consistently before taking it to cloud environments.
 
 **Build:** Complete Project 3: run Nginx, your backend API, and PostgreSQL with Docker Compose.
 
 **Move on when:** You can build an image, inspect container logs, enter a container, and explain how services communicate in Compose.
+
+## 4. Cloud — Choose One Provider
+
+**Study:** Choose AWS, Azure, or GCP. Learn IAM, virtual networking, VM/compute, object storage, load balancing, managed databases, logs, and cost controls.
+
+**Goal:** Deploy the Dockerized application securely on one cloud without trying to learn every provider.
+
+**Build:** Complete Project 4: deploy the Dockerized app to cloud VM/compute behind a load balancer, with a managed database and object storage.
+
+**Move on when:** You can explain public versus private networking, least-privilege access, the Dockerized app’s path through the load balancer, and where to find logs.
 
 ## 5. Automation & Infrastructure — CI/CD + Terraform
 
