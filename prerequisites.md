@@ -31,6 +31,24 @@ Read this after Linux and Git, alongside Bash/Python. Complete the project befor
 | Indexes | An index can speed up lookups but costs storage and write work. |
 | Transactions | A transaction groups changes so they succeed or fail together. |
 
+## System Design Basics — Good to Know
+
+You do **not** need advanced system design before starting Cloud/DevOps. These simple building blocks help you understand cloud services because providers mostly offer managed versions of them.
+
+| Building block | Practical idea | Cloud examples |
+|---|---|---|
+| Client/server | Clients send requests to application servers. | VM, container, or managed app service |
+| Load balancer | Distributes traffic across healthy application instances. | AWS ALB · Azure Load Balancer |
+| Reverse proxy | Accepts web traffic and forwards it to an application. | Nginx · managed load balancer |
+| Cache | Keeps frequently used temporary data close to the application. | ElastiCache · Azure Cache for Redis |
+| Database | Stores durable application data. | RDS · Azure SQL |
+| Object storage | Stores files such as uploads, images, and backups. | S3 · Blob Storage |
+| Message queue | Holds work for a service to process later. | SQS · Service Bus |
+| Stateless vs stateful | Stateless apps keep no local user data; stateful systems keep data that must persist. | API deployment vs database |
+| Horizontal vs vertical scaling | Add more instances, or give one instance more CPU/RAM. | Auto Scaling vs larger VM |
+| High availability | Use redundant components so one failure does not stop the service. | Multiple app instances/AZs |
+| Single point of failure | One component whose failure stops the system. | One unreplicated VM or database |
+
 ## Required hands-on project
 
 ```mermaid
