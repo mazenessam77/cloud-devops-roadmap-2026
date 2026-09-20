@@ -4,7 +4,7 @@ A practical path from zero to a first Cloud Engineer, DevOps Engineer, or Cloud 
 
 > **Learn the fundamentals first, understand how applications work, then learn how to deploy, automate, monitor, and operate them.**
 
-Start with [HOW-TO-FOLLOW-THE-ROADMAP.md](HOW-TO-FOLLOW-THE-ROADMAP.md), then use [ROADMAP.md](ROADMAP.md) as your visual path. Read [prerequisites.md](prerequisites.md) only for the small amount of application and database background that makes deployment clearer; it is not a separate career track. Work through the numbered [docs](docs/), then complete the [projects](projects/). You do not need a CS degree, backend career, network-engineering background, or Linux-admin job to begin.
+Start with [HOW-TO-FOLLOW-THE-ROADMAP.md](HOW-TO-FOLLOW-THE-ROADMAP.md), then use [ROADMAP.md](ROADMAP.md) as your visual path. Read [prerequisites.md](prerequisites.md) only for the small amount of application and database background that makes deployment clearer; it is not a separate career track. Work through the numbered [docs](docs/), then complete the [projects](projects/).
 
 ## Recommended learning rule
 
